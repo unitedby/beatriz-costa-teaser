@@ -1,0 +1,159 @@
+:root {
+    --margin-main: 40px;
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+/*fonts*/
+@font-face {
+    font-family: 'Plus Jakarta Sans';
+    src: url('../fonts/PlusJakartaSans-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+@font-face {
+    font-family: 'Plus Jakarta Medium Sans';
+    src: url('../fonts/PlusJakartaSans-Medium.woff2') format('woff2');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+p {
+    font-size: 90px;
+    line-height: 100px;
+    color: white;
+    font-family: 'Plus Jakarta Medium Sans', sans-serif;
+}
+
+/*TEASER*/
+.main-index {
+    height: calc(var(--vh, 1h) * 100);
+    overflow: hidden;
+}
+
+
+.bitmap {
+    width: 100%;
+    height: auto;
+}
+
+.teaser-background {
+    width: 100%;
+    height: calc(var(--vh, 1h) * 100);
+}
+
+
+.teaser-background img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+}
+
+.teaser-countdown {
+    position: absolute;
+    top: var(--margin-main);
+    left: var(--margin-main);
+    z-index: 1;
+}
+
+.teaser-logo {
+    position: absolute;
+    bottom: var(--margin-main);
+    left: var(--margin-main);
+    z-index: 1;
+
+    width: calc(100% - (var(--margin-main) * 2));
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap:20px;
+}
+
+.teaser-logo img {
+    height: 200px;
+}
+
+#img-desktop {
+    display: block;
+}
+
+#img-mobile {
+    display: none;
+}
+
+@media (max-width: 1600px) {
+
+    /* laptops médios */
+    :root {
+        --margin-main: 40px;
+    }
+
+    p {
+        font-size: 70px;
+        line-height: 80px;
+        color: white;
+        font-family: 'Plus Jakarta Medium Sans', sans-serif;
+    }
+
+    .teaser-logo img {
+        height: 170px;
+    }
+}
+
+@media (max-width: 1024px) {
+
+    /* tablets */
+    :root {
+        --margin-main: 30px;
+    }
+
+    p {
+        font-size: 50px;
+        line-height: 60px;
+        color: white;
+        font-family: 'Plus Jakarta Medium Sans', sans-serif;
+    }
+
+    .teaser-logo img {
+        height: 120px;
+    }
+}
+
+@media (max-width: 640px) {
+    /* mobile */
+    :root {
+        --margin-main: 20px;
+    }
+
+    p {
+        font-size: 50px;
+        line-height: 60px;
+        color: white;
+        font-family: 'Plus Jakarta Medium Sans', sans-serif;
+    }
+
+    .teaser-logo img {
+        height: 100px;
+    }
+
+    #img-desktop {
+        display: none;
+    }
+
+    #img-mobile {
+        display: block;
+    }
+}
